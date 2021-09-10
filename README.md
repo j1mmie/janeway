@@ -2,6 +2,27 @@
   <b>janeway</b>
 </h1>
 
+<div>
+  <h3>Fork of Janeway with a few minor UX improvements:</h3>
+  <ul>
+    <li>Support for the C-w control signal, aka the "delete word" command. On MacOS, this is Option + Backspace.</li>
+    <li>New auto-complete behavior, more akin to Google Chrome's JS console:
+      <ul>
+        <li>Enter key does not automatically select an item from the autocomplete suggestions. The user must first "focus" the list by scrolling through it (using the up or down arrows). NOTE: The suggestions still visually appear focused because Blessed Lists must have <i>some</i> item selected. But Enter will not select that item unless the arrow keys have been used first.</li>
+        <li>Tab key always selects a suggestion. However, it no longer appends a tab character to the command.</li>
+        <li>Dot key selects a suggestion only if the user has used the arrow keys first. A dot character (.) is appended to the command for convenience.</li>
+      </ul>
+    </li>
+  </ul>
+  
+  <h3>TODO:</h3>
+  <ul>
+    <li>Typescript definition file (.d.ts )</li>
+    <li>Fix List to appear unfocused until user scrolls with arrow keys</li>
+  </ul>
+  
+</div>
+
 <div align="center">
   <!-- Version - npm -->
   <a href="https://www.npmjs.com/package/janeway">
